@@ -27,7 +27,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './index.css';
 
 //components
-import App from './App';
+import Quiz from './Components/Quiz/quizes';
 
 //sideBar
 import SideBar from "./Components/General/SideBar/sideBar";
@@ -40,8 +40,8 @@ const routes = createBrowserRouter([
   {
     path: "/",
     element: (
-      // <div className="d-flex app-container">
-      <div className="">
+      <div className="p-5 app-container">
+        {/* <div className=""> */}
         {/*global routes*/}
         <SideBar />
         {/* <Outlet /> */}
@@ -50,18 +50,10 @@ const routes = createBrowserRouter([
     ),
     errorElement: <h4>page not found</h4>,
     children: [
-      {
-        path: '/home',
-        element: <App />
-      }
+      { path: 'quiz', element: <Quiz /> },
+      { path: "quiz/:quezId", element: <Quiz /> },
     ]
   },
-
-  //login
-  // {
-  //   path: "/login",
-  //   element: <Login />,
-  // },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -71,10 +63,6 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
-// root.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>
-// );
+
 
 reportWebVitals();
