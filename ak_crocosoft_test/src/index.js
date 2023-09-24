@@ -29,6 +29,9 @@ import './index.css';
 //components
 import App from './App';
 
+//sideBar
+import SideBar from "./Components/General/SideBar/sideBar";
+
 //Modal
 import Modal from "./Components/General/popUp/popUp";
 
@@ -40,8 +43,8 @@ const routes = createBrowserRouter([
       // <div className="d-flex app-container">
       <div className="">
         {/*global routes*/}
-        {/* <SideBar /> */}
-        <Outlet />
+        <SideBar />
+        {/* <Outlet /> */}
         {/* <Modal /> */}
       </div>
     ),
