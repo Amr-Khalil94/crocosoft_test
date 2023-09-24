@@ -30,6 +30,9 @@ export const createQuizThunk = createAsyncThunk(
             baseURL: `http://localhost:3005`,
             url: '/quizes',
             method: "POST",
+            headers: {
+                'Content-Type': 'application/json; charset=UTF-8',
+            },
             data: JSON.stringify(args)
         };
         return axios(options)
@@ -63,6 +66,20 @@ const quizSlice = createSlice({
             state.isload = false
         },
         [getQuizesThunk.rejected]: (state, action) => {
+            console.log(action)
+            state.isload = false
+        },
+
+        [createQuizThunk.pending]: (state, action) => {
+            state.isload = true
+            console.log(action)
+        },
+        [createQuizThunk.fulfilled]: (state, action) => {
+            console.log(action)
+            state.quizes.push(action.payload)
+            state.isload = false
+        },
+        [createQuizThunk.rejected]: (state, action) => {
             console.log(action)
             state.isload = false
         },
