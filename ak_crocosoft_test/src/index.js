@@ -27,7 +27,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './index.css';
 
 //components
-import Quiz from './Components/Quiz/quizes';
+import Quiz from './Components/Quizs/quizes';
+
+import QuizDetails from './Components/QuizDetails/quizDetails';
 
 //sideBar
 import SideBar from "./Components/General/SideBar/sideBar";
@@ -51,7 +53,7 @@ const routes = createBrowserRouter([
     errorElement: <h4>page not found</h4>,
     children: [
       { path: 'quiz', element: <Quiz /> },
-      { path: "quiz/:quezId", element: <Quiz /> },
+      { path: "quiz/:quezId", element: <QuizDetails /> },
     ]
   },
 ]);
