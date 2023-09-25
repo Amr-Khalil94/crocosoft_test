@@ -1,5 +1,5 @@
 //react
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 //formik
 import { useFormik } from "formik";
@@ -15,108 +15,38 @@ import {
     TableHead,
     TableRow,
     Paper,
-    RadioGroup,
-    FormControlLabel,
-    Radio
+    FormHelperText,
+    TextField,
+    IconButton
 } from '@mui/material';
 
-//material UI
-import { TextField } from '@mui/material';
-import { IconButton } from "@mui/material";
-import InputAdornment from "@mui/material/InputAdornment";
-
-
-
 //icons
-import deleteIcon from "../../../svg/Iconly-Light-Delete.svg";
 import AddInput from "../../../svg/Group68834.svg";
 
-
-
 export default (props) => {
-    const [questionState, setQuestionState] = ('')
-
+    //useState
     const [radioOptions, setRadioOptions] = useState([]);
     const [selectedOption, setSelectedOption] = useState('');
 
-    ////test
-
-    console.log(props);
-    console.log(props.testID);
-    console.log(props.AddMode);
-    console.log(props.testIDwhenAdd);
-    console.log(props.quisId);
-
+    //formik
     const formik = useFormik({
         initialValues: {
-            AddMode: props.AddMode,
             question: "",
             Answesrs: [],
-            test_id: props.testID,
-            title_ar: "",
-            type: "select",
-            ar: ["مثال1", "مثال1", "مثال3"],
         },
         onSubmit: (values) => {
-
+            console.log(radioOptions)
             console.log(values);
-            props.handleQuesCond(values);
+            console.log(selectedOption)
         },
     });
-
-    //useEffect
-    // useEffect(() => {
-    //     if (!props.AddMode) {
-    //         console.log(props.editQondQuesData.values.length);
-
-    //         // alert('edit mode')
-    //         const answersObject = props.editQondQuesData.values.map((item) => {
-    //             console.log(item);
-    //             return item.answer_en;
-    //         });
-
-    //         handleAddInheretedRows(props.editQondQuesData.values.length - 1);
-
-    //         //edit
-    //         // get user and set popUp fields
-    //         formik.setFieldValue("question", props.editQondQuesData.title_en);
-    //         formik.setFieldValue("Answesrs", answersObject);
-    //         formik.setFieldValue("quesId", props.quisId);
-
-
-    //     } else if (props.AddMode) {
-    //         //add
-    //         formik.setFieldValue("test_id", props.firstViewData.id);
-    //     }
-    // }, []);
-
-
-
-
-    // console.log(formik);
-    const [rows, setRows] = useState([{ answer: "" }]);
-
-
-
-
-
-
-
-
-
-
-
-
-
-    console.log(formik.values);
-    // console.log(formik.values.Answesrs);
-
 
 
     // handle and quistion Answers 
     const handleAddRadio = () => {
-        const newOption = `Option ${radioOptions.length + 1}`;
+        const newOption = `Answer ${radioOptions.length + 1}`;
         setRadioOptions([...radioOptions, newOption]);
+
     };
 
     const handleRemoveRadio = (index) => {
@@ -128,7 +58,6 @@ export default (props) => {
     const handleOptionChange = (event) => {
         setSelectedOption(event.target.value);
     };
-
 
     return (
 
@@ -157,7 +86,7 @@ export default (props) => {
 
 
                             <TableBody>
-                                <div className="questFeild">
+                                <div className="questFeild mb-3">
                                     <TextField
                                         className={
                                             formik.touched.question && formik.errors.question
@@ -184,14 +113,13 @@ export default (props) => {
                                     aria-label="add"
                                     onClick={handleAddRadio}
                                 >
-                                    <img src={AddInput} />
+                                    <img alt='add input' src={AddInput} />
                                     <span>Add Another Answer</span>
                                 </IconButton>
 
 
                                 {radioOptions.map((option, index) => (
-                                    <div key={index}>
-
+                                    <div key={index} className="mb-3">
                                         <input
                                             type="radio"
                                             name="radioGroup"
@@ -201,6 +129,7 @@ export default (props) => {
                                         />
                                         {option}
                                         <button onClick={() => handleRemoveRadio(index)}>Remove</button>
+                                        <FormHelperText>{selectedOption !== option ? 'answer is false' : 'the answer is true'}</FormHelperText>
                                     </div>
                                 ))}
                             </TableBody>

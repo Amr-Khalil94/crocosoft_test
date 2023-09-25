@@ -1,32 +1,18 @@
 //react
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect } from "react";
 
 
 //material ui
 import Dialog from "@mui/material/Dialog";
 import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import DialogActions from "@mui/material/DialogActions";
-import Button from "@mui/material/Button";
-
 
 //redux
 import { useDispatch, useSelector } from "react-redux";
 import { closeModal } from "../../../Store/modalSlice.js";
-// import { deleteRow, getRows } from "../../../Store/requestsSlice";
 
 //components
-
 import AddAndEditQuis from './addAndEditQuis_PopUp.js'
-// import Delete from "./delete";
-// import AddProjectCat from "./addProjectCat";
-// import AddBlogCat from "./addBlogCat";
-// import AddCareerCat from "./addCareerCat";
-// import AddFeedBacks from "./addFeedBacks.js";
-// import AddService from "./addService.js";
-// import AddEditJobs from './addEditJob'
-// import ErrorNotePopUp from './errorNotePopUp'
 
 // //styles
 import "./popUp.css";
@@ -37,11 +23,6 @@ export default () => {
     const {
         isOpen,
         popUpTitle,
-        modalId,
-        modalType,
-        deleteURL,
-        getDataArg,
-        getAllData,
         componentName,
     } = useSelector((state) => state.modalSlice);
 
@@ -64,10 +45,6 @@ export default () => {
     return (
 
         <div className="popUp-parent">
-            <h1>Modal</h1>
-
-
-
             <Dialog
                 className="popUp-parent"
                 open={isOpen}
@@ -82,15 +59,6 @@ export default () => {
 
                 <DialogContent className="p-0">{renderComponent}</DialogContent>
             </Dialog>
-
-
-
-
-
-
-
-
-
         </div>
 
     );

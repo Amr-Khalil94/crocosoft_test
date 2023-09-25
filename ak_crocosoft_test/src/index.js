@@ -3,7 +3,6 @@ import React from 'react';
 
 //react dom
 import ReactDOM from "react-dom/client";
-import { Outlet } from "react-router-dom";
 
 //router dom v6
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -32,26 +31,25 @@ import Quiz from './Components/Quizs/quizes';
 import QuizDetails from './Components/QuizDetails/quizDetails';
 
 //sideBar
-import SideBar from "./Components/General/SideBar/sideBar";
+import SideBar from "./Components/General/SideBar/globalTitleAndBtt";
 
 //Modal
 import Modal from "./Components/General/popUp/popUp";
 
 //routing
 const routes = createBrowserRouter([
+
   {
     path: "/",
     element: (
       <div className="p-5 app-container">
-        {/* <div className=""> */}
-        {/*global routes*/}
         <SideBar />
-        {/* <Outlet /> */}
         <Modal />
       </div>
     ),
     errorElement: <h4>page not found</h4>,
     children: [
+      { index: true, element: <Quiz /> },
       { path: 'quiz', element: <Quiz /> },
       { path: "addAndEditquiz", element: <QuizDetails /> },
       { path: "addAndEditquiz/:quezId", element: <QuizDetails /> },

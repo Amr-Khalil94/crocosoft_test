@@ -48,7 +48,6 @@ export const createQuizThunk = createAsyncThunk(
 const quizSlice = createSlice({
     initialState: {
         quizes: [],
-        isLocalStorge: false,
         isload: false,
     },
     name: 'quizes',

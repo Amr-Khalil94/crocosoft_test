@@ -1,9 +1,9 @@
 //react
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 //redux
 import { useDispatch, useSelector } from "react-redux";
-import { getQuizes, quizesReducer, getQuizesThunk } from "../../Store/quizesSlices"
+import { getQuizesThunk } from "../../Store/quizesSlices"
 
 //dom route v6
 import { Outlet } from "react-router-dom";
@@ -13,7 +13,7 @@ import "./styles/table.css"
 
 export default () => {
     //quizes array
-    const { quizes, isload, isLocalStorge } = useSelector(state => state.quizesSlices)
+    const { quizes, isload } = useSelector(state => state.quizesSlices)
 
     //redux - dispatch
     const dispatch = useDispatch()
@@ -39,8 +39,7 @@ export default () => {
                             <th>Description</th>
                             <th>Score</th>
                             <th>url</th>
-                            <th>Create</th>
-                            <th>Edit</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -53,16 +52,20 @@ export default () => {
                                     quizes.map(quiz => {
 
                                         console.log(quiz)
-                                        return (
-                                            <tr>
-                                                <td>{quiz.title}</td>
-                                                <td>{quiz.description}</td>
-                                                <td>{quiz.score}</td>
-                                                <td>{quiz.url}</td>
-                                                <td><button>Create</button></td>
-                                                <td><button>Edit</button></td>
-                                            </tr>
-                                        )
+                                        if (quiz.title !== '') {
+                                            return (
+                                                <tr>
+                                                    <td>{quiz.title}</td>
+                                                    <td>{quiz.description}</td>
+                                                    <td>{quiz.score}</td>
+                                                    <td>https://www.youtube.com/watch?v=e6EGQFJLl04</td>
+                                                    {/* <td>{quiz.url}</td> */}
+
+
+                                                </tr>
+                                            )
+                                        }
+
                                     })
                                 }
                             </>
