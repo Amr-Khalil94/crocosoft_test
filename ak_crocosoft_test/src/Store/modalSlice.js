@@ -26,8 +26,8 @@ const modalSlice = createSlice({
       state.getDataArg = action.payload.getDataArg;
       state.componentName = action.payload.componentName;
       state.subTitlle = action.payload.subTitlle;
-      state.addDataArg= action.payload.addDataArg;
-     
+      state.addDataArg = action.payload.addDataArg;
+
     },
     closeModal: (state, action) => {
       state.isOpen = false;

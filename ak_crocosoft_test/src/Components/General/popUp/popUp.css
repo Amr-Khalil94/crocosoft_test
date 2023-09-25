@@ -1,0 +1,293 @@
+/* Styling for the modal container */
+.popUp-parent .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the modal content */
+.popUp-parent .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 80%;
+}
+
+/* Close button style */
+.popUp-parent .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.MuiDialog-container .MuiTypography-root {
+    text-align: center;
+    font-size: 18px;
+}
+
+
+.MuiDialog-container .MuiPaper-elevation {
+    max-width: 900px;
+    padding: 20px;
+    width: 500px;
+}
+
+.MuiDialog-container .MuiDialogActions-spacing {
+    justify-content: center;
+}
+
+.MuiDialog-container .confirmButton,
+.MuiDialog-container .confirmButton:hover {
+    background-color: #F12D36;
+    color: #FFFFFF;
+    text-transform: unset;
+    width: 50%;
+    font-size: 12px;
+}
+
+.MuiDialog-container .dismissButton,
+.MuiDialog-container .dismissButton:hover {
+    background-color: #FEE9EA;
+    color: #F12D36;
+    text-transform: unset;
+    width: 50%;
+    font-size: 12px;
+}
+
+
+#dropDownModal {
+    padding: 0% !important;
+    /* background-color:  red !important; */
+}
+
+#dropDownModal table .MuiPaper-outlined {
+    border: unset !important;
+}
+
+#dropDownModal table .saveBtt,
+#dropDownModal .saveBtt .MuiButton-label {
+    font-size: 13px;
+    color: #00A099;
+    font-weight: 500;
+}
+
+
+#inheretedPopUp .saveBtt {
+    font-size: 13px;
+    color: #00A099 !important;
+    font-weight: 500 !important;
+    text-transform: unset !important;
+}
+
+#inheretedPopUp .MuiInputBase-root {
+    flex-direction: row-reverse;
+    padding-right: 10px;
+}
+
+
+#inheretedPopUp .MuiDialogTitle-root {
+    color: #13182B !important;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#inheretedPopUp .MuiDialogContent-root {
+    padding-top: 10px !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+#inheretedPopUp .MuiDialogContent-root fieldset:focus,
+#inheretedPopUp .notchedOutline:focus,
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+
+
+    border: 2px solid #E9EAEC !important;
+}
+
+#dropDownModal .savequisBtt,
+#successModal .savequisBtt {
+    width: 45% !important;
+    height: 40px !important;
+    font-size: 15px;
+    color: #FFFFFF;
+    font-weight: 500;
+    background-color: #00A099;
+    text-transform: unset !important;
+
+}
+
+#dropDownModal table thead tr th {
+    padding: 0px !important;
+    border-bottom: unset !important;
+}
+
+#dropDownModal .MuiPaper-outlined {
+    border: unset;
+}
+
+#dropDownModal .MuiPaper-root {
+    padding: 0% !important;
+}
+
+#dropDownModal .quesType-Modal {
+    white-space: nowrap
+}
+
+#dropDownModal table tbody .inputFeild-cont {
+    display: flex;
+    flex-direction: column;
+    background-color: unset !important;
+}
+
+#dropDownModal table tbody .MuiTableCell-body {
+    border-bottom: unset !important;
+    padding-left: 0px !important;
+    padding-top: 0px !important;
+}
+
+
+
+#dropDownModal table tbody tr td .MuiTextField-root button {
+    background-color: #F22D361A !important;
+    border-radius: 5px !important;
+    color: #F12D36;
+    display: flex;
+    margin: auto;
+
+}
+
+#dropDownModal table tbody .iconBttAdd {
+    border: 2px solid #00A099;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+#dropDownModal table tbody .iconBttAdd span {
+    color: #00A099;
+    font-weight: 500;
+    font-size: 13px !important;
+    margin-left: 10px;
+}
+
+#dropDownModal table tbody .MuiFormControl-root,
+#dropDownModal .MuiFormControl-root {
+    border-radius: 5px;
+    border: 1px solid #E9EAEC;
+    width: 100%;
+    background: #FAFAFA;
+    margin-top: 0px !important;
+}
+
+#dropDownModal table tbody fieldset,
+#dropDownModal fieldset {
+    border: unset !important;
+}
+
+#dropDownModal table tbody {
+    display: table-caption;
+}
+
+
+#dropDownModal table tbody .MuiInputBase-root {
+    flex-direction: row-reverse;
+}
+
+#dropDownModal table tbody .deleteIcon-cont {
+    margin: 5px;
+    padding: 5px;
+    background-color: #F22D361A;
+    border-radius: 50%;
+}
+
+#dropDownModal table tbody .deleteIcon-cont img {
+    width: 15px;
+}
+
+#dropDownModal table tbody .range-cont {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+#dropDownModal table tbody .MuiInputAdornment-positionEnd {
+    background-color: unset !important;
+}
+
+#dropDownModal table tbody .label-cont {
+    margin-top: 15px;
+}
+
+#dropDownModal table tbody .questFeild {
+    width: 96% !important;
+}
+
+
+#dropDownModal .title-cont {
+    font-size: 0.875rem !important;
+}
+
+
+#dropDownModal .testExamModal table tbody .questFeild {
+    width: 100% !important;
+
+}
+
+#dropDownModal .testExamModal table tbody .MuiTableCell-root {
+    padding-right: 0px !important;
+}
+
+#dropDownModal #addReport .MuiOutlinedInput-adornedStart {
+    padding-right: 5px;
+    flex-direction: row-reverse;
+    display: flex;
+}
+
+.is-invalid {
+    border: 1px solid red !important;
+    border-radius: 5px !important
+}
+
+#successModal .successModal h4 {
+    color: #13182B !important;
+    text-align: center;
+    font-weight: 400 !important;
+}
+
+#successModal .successModal p {
+    font-size: 14px;
+    color: #13182B !important;
+    text-align: center !important;
+    font-weight: 400 !important;
+    display: block;
+}
+
+
+#successModal .successModal {
+    margin-bottom: -68px !important;
+}
+
+#successModal .MuiPaper-outlined {
+    border: unset !important;
+}
+
+#successModal {
+    overflow: hidden !important;
+}
+
+/* .MuiOutlinedInput-notchedOutline:focus{
+    border: 1px solid red !important;
+ }
+ 
+ .MuiPaper-outlined{
+    border: 1px solid red !important;
+ } */
