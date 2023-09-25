@@ -10,9 +10,9 @@ export default () => {
     return (
         <div>
             <div className="d-flex justify-content-between mb-3">
-                <h1>About</h1>
+                <h1>Quiz</h1>
                 <button onClick={() => {
-                    navigate(`quiz/22`)
+                    navigate(`/addAndEditquiz`)
                 }}>Create</button>
 
             </div>

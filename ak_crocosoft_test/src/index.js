@@ -53,7 +53,8 @@ const routes = createBrowserRouter([
     errorElement: <h4>page not found</h4>,
     children: [
       { path: 'quiz', element: <Quiz /> },
-      { path: "quiz/:quezId", element: <QuizDetails /> },
+      { path: "addAndEditquiz", element: <QuizDetails /> },
+      { path: "addAndEditquiz/:quezId", element: <QuizDetails /> },
     ]
   },
 ]);
