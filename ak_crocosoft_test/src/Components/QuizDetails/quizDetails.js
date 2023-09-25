@@ -59,11 +59,17 @@ export default () => {
 
             <form onSubmit={handleSubmit}>
                 <div className='row px-3 justify-content-between'>
-                    <label>Quiz information</label>
+                    <h3 className='ps-0'>Quiz information</h3>
                     <input ref={quizTitleRef} placeholder='Quiz title' className='col-6 mb-2' type="text" id="quizTitle" name="quizTitle" required value={formData.quizTitle} onChange={handleInputChange} />
                     <input ref={quizDescriptionRef} placeholder='Quiz description' className='col-5 mb-2' type="text" id="quizDescription" name="quizDescription" required value={formData.quizDescription} onChange={handleInputChange} />
                     <input ref={quizScoreRef} placeholder='Quiz Score' className='col-6 mb-2' type="text" id="quizScore" name="quizScore" required value={formData.quizScore} onChange={handleInputChange} />
                     <input ref={quizUrlRef} placeholder='Quiz url' className='col-5 mb-2' type="text" id="quizUrl" name="quizUrl" value='https://www.youtube.com/watch?v=e6EGQFJLl04' disabled />
+                </div>
+
+                <div className='d-flex px-3 justify-content-between mt-5 ps-0'>
+                    <h3 className='ps-0'>Questions and answers</h3>
+                    <button className='ps-0'>Create a Quistion</button>
+
                 </div>
 
                 <input type="submit" value="Submit" className='col-6 mt-3 ms-auto me-auto d-block' />

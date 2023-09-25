@@ -1,16 +1,10 @@
 //react
 import React, { useEffect, useState, useRef } from "react";
 
-// //material ui
-// import Dialog from "@mui/material/Dialog";
-// import DialogContent from "@mui/material/DialogContent";
-// import DialogContentText from "@mui/material/DialogContentText";
-// import DialogTitle from "@mui/material/DialogTitle";
-// import DialogActions from "@mui/material/DialogActions";
-// import Button from "@mui/material/Button";
 
-// //redux
-// import { useDispatch, useSelector } from "react-redux";
+
+//redux
+import { useDispatch, useSelector } from "react-redux";
 // import { closeModal } from "../../../Store/modalSlice.js";
 // import { deleteRow, getRows } from "../../../Store/requestsSlice";
 
@@ -68,7 +62,7 @@ export default () => {
     return (
 
         <div className="popUp-parent">
-            <h1>ss</h1>
+            <h1>Modal</h1>
         </div>
         //     <Dialog
         //       className="popUp-parent"

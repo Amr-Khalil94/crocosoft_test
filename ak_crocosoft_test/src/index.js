@@ -47,7 +47,7 @@ const routes = createBrowserRouter([
         {/*global routes*/}
         <SideBar />
         {/* <Outlet /> */}
-        {/* <Modal /> */}
+        <Modal />
       </div>
     ),
     errorElement: <h4>page not found</h4>,
